@@ -4,6 +4,7 @@ import "./Home.css";
 import logotipo from "../assets/logotipo.jpeg";
 import Footer from "../components/Footer";
 import Servicios from "./Servicios";
+import fondo2 from "../assets/fondo2.jpeg";
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
@@ -28,8 +29,8 @@ const Home = () => {
             <a href="#projects" className="text-gray-600 hover:text-gray-900">
               Proyectos
             </a>
-            <a href="#" className="text-gray-600 hover:text-gray-900">
-              Consultas
+            <a href="#services" className="text-gray-600 hover:text-gray-900">
+              Servicios
             </a>
             <a href="#about" className="text-gray-600 hover:text-gray-900">
               Sobre Mi
@@ -128,8 +129,8 @@ const Home = () => {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <img
-                src="/placeholder.svg?height=600&width=800&text=About Us"
-                alt="About Arch Studio"
+                src={fondo2}
+                alt="About Ering Studio"
                 className="rounded-lg shadow-lg"
               />
             </div>

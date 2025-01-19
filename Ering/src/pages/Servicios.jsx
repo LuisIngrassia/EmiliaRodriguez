@@ -16,7 +16,7 @@ const Servicios = () => {
   return (
     <div className="min-h-screen bg-white select-none">
       {/* Consultation Types */}
-      <section className="py-16">
+      <section className="py-16" id="services">
         <div className="container mx-auto px-4">
           <h3 className="text-3xl font-bold text-gray-800 mb-12 text-center">
             Servicios de Asesoria
