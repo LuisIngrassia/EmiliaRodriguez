@@ -190,25 +190,22 @@ const Home = () => {
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Sobre Ering Estudio
               </h2>
-              <p className="text-gray-600 mb-6">
-                We are a team of passionate architects dedicated to creating
-                innovative and sustainable designs that transform spaces and
-                enhance lives.
-              </p>
+              <p className="text-gray-600 mb-6">....</p>
               <div className="flex items-center mb-4">
                 <Building2 className="text-blue-600 mr-4" />
                 <span className="text-gray-700">
-                  Más de 10 proyectosd completados
+                  Más de 10 proyectos completados
                 </span>
               </div>
               <div className="flex items-center mb-4">
                 <Users className="text-blue-600 mr-4" />
                 <span className="text-gray-700">
-                  Expert team of architects and designers
+                  Arquitecta y Diseñadora de Interiores con más de 5 años de
+                  experiencia
                 </span>
               </div>
               <a
-                href="#"
+                href="#projects"
                 className="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300 inline-block"
               >
                 Aprende Más Sobre Mi
