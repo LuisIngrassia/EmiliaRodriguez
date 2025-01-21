@@ -13,6 +13,25 @@ import {
 } from "lucide-react";
 
 const Servicios = () => {
+  // Enviar el formulario
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const response = await fetch("https://formspree.io/f/mgvvgpvr", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      setStatus("Thank you for your message, I will contact you soon.");
+      setFormData({ name: "", email: "", message: "" }); // Limpiar formulario
+    } else {
+      setStatus("There was an error sending the message. Try again.");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white select-none">
       {/* Consultation Types */}
@@ -216,7 +235,7 @@ const Servicios = () => {
             <h3 className="text-3xl font-bold text-gray-800 mb-8 text-center">
               Reserve Su Consulta
             </h3>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label
                   htmlFor="name"

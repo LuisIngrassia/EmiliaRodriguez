@@ -9,6 +9,18 @@ import fondo2 from "../assets/fondo2.jpeg";
 const Home = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
 
+  const handleSmoothScroll = (event) => {
+    event.preventDefault();
+    const targetId = event.currentTarget.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -23,19 +35,39 @@ const Home = () => {
             {/* <h1 className="text-2xl font-bold text-gray-800">Ering Studio</h1> */}
           </div>
           <nav className="hidden md:flex space-x-6 select-none">
-            <a href="#home" className="text-gray-600 hover:text-gray-900">
+            <a
+              href="#home"
+              className="text-gray-600 hover:text-gray-900"
+              onClick={handleSmoothScroll}
+            >
               Home
             </a>
-            <a href="#projects" className="text-gray-600 hover:text-gray-900">
+            <a
+              href="#projects"
+              className="text-gray-600 hover:text-gray-900"
+              onClick={handleSmoothScroll}
+            >
               Proyectos
             </a>
-            <a href="#services" className="text-gray-600 hover:text-gray-900">
+            <a
+              href="#services"
+              className="text-gray-600 hover:text-gray-900"
+              onClick={handleSmoothScroll}
+            >
               Servicios
             </a>
-            <a href="#about" className="text-gray-600 hover:text-gray-900">
+            <a
+              href="#about"
+              className="text-gray-600 hover:text-gray-900"
+              onClick={handleSmoothScroll}
+            >
               Sobre Mi
             </a>
-            <a href="#contact" className="text-gray-600 hover:text-gray-900">
+            <a
+              href="#contact"
+              className="text-gray-600 hover:text-gray-900"
+              onClick={handleSmoothScroll}
+            >
               Contacto
             </a>
           </nav>
@@ -46,19 +78,39 @@ const Home = () => {
         {menuOpen && (
           <nav className="md:hidden bg-white py-4 select-none">
             <div className="container mx-auto px-4 flex flex-col space-y-2">
-              <a href="#" className="text-gray-600 hover:text-gray-900">
+              <a
+                href="#home"
+                className="text-gray-600 hover:text-gray-900"
+                onClick={handleSmoothScroll}
+              >
                 Home
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
+              <a
+                href="#projects"
+                className="text-gray-600 hover:text-gray-900"
+                onClick={handleSmoothScroll}
+              >
                 Proyectos
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                Consultas
+              <a
+                href="#services"
+                className="text-gray-600 hover:text-gray-900"
+                onClick={handleSmoothScroll}
+              >
+                Servicios
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
+              <a
+                href="#about"
+                className="text-gray-600 hover:text-gray-900"
+                onClick={handleSmoothScroll}
+              >
                 Sobre Mi
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
+              <a
+                href="#contact"
+                className="text-gray-600 hover:text-gray-900"
+                onClick={handleSmoothScroll}
+              >
                 Contacto
               </a>
             </div>
@@ -77,7 +129,7 @@ const Home = () => {
               Soluciones arquitectónicas innovadoras para la vida moderna
             </p>
             <a
-              href="#"
+              href="#projects"
               className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300"
             >
               Explora Mis Proyectos
@@ -136,7 +188,7 @@ const Home = () => {
             </div>
             <div className="md:w-1/2 md:pl-12">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                Sobre Ering Studio
+                Sobre Ering Estudio
               </h2>
               <p className="text-gray-600 mb-6">
                 We are a team of passionate architects dedicated to creating
